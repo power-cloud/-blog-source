@@ -1,0 +1,20 @@
+language: node_js
+node_js: stable
+install:
+- npm install
+script:
+- hexo g
+deploy:
+  provider: pages
+  local_dir: public/ #用于deploy的文件夹
+  repo: power-cloud/blog #Repo slug
+  target_branch: master #分支
+  email: mail@dmx.name #提交动作的使用的email
+  name: dmx #提交动作使用的帐号
+  skip_cleanup: true
+  github_token: ${token} # Set in travis-ci.org dashboard
+  on:
+    branch: master
+branches:
+  only:
+  - master
