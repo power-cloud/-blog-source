@@ -37,7 +37,7 @@ This may also be found at: /Users/dmx/.jenkins/secrets/initialAdminPassword
 
 ![Jenkins选择插件](/images/jenkins_select_plugin.png)
 
-首先先把默认选中的插件都取消掉，然后选择我们要安装的插件，对于Android打包来讲一般需要的插件有
+首先把默认选中的插件都取消掉，然后选择我们要安装的插件，对于Android打包来讲一般需要的插件有
 - Git plugin
 - Gradle Plugin
 - Email Extension Plugin
@@ -120,7 +120,7 @@ android{
         }
     }
 ```
-最总完成的gradle脚本为
+最终完成的gradle脚本为
 ```code
 apply plugin: 'com.android.application'
 repositories {
@@ -389,8 +389,7 @@ const distPath=args[1]//目标文件地址
 const img=qr.image(filePath,{size:5})//生成二维码图片
 img.pipe(require('fs').createWriteStream(distPath));//保存图片
 ```
-代码完整地址为：[https://github.com/dumingxin/jenkinsNode.git](https://github.com/dumingxin/jenkinsNode.git),首先需要安装nodejs，然后在代码目录执行`npm install`
-执行`node web.js`启动静态文件服务即可。如果想后台运行可以使用pm2启动web.js
+代码完整地址为：[https://github.com/dumingxin/jenkinsNode.git](https://github.com/dumingxin/jenkinsNode.git),首先需要安装nodejs，然后在代码目录执行`npm install`,执行`node web.js`启动静态文件服务即可。如果想后台运行可以使用pm2启动web.js
 
 最后打包成功之后的效果
 
