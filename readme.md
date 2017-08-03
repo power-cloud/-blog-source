@@ -1,5 +1,7 @@
 # blog-source
 
+[![Build Status](https://www.travis-ci.org/power-cloud/blog-source.svg?branch=master)](https://www.travis-ci.org/power-cloud/blog-source)
+
 ## 简述
 博客基于非常流行的[Hexo](https://hexo.io/zh-cn/)搭建，具体说明参见[官方文档](https://hexo.io/zh-cn/docs/)
 
